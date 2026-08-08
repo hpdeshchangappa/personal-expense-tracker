@@ -84,3 +84,138 @@ expense_tracker/
 │
 ├── .gitignore
 └── README.md
+
+---
+###🗄️ Database
+---
+
+The application uses MySQL with two main tables:
+
+Users
+
+Stores registered user information.
+
+Transactions
+
+Stores:
+
+Income
+Expenses
+Categories
+Amounts
+Descriptions
+Transaction dates
+
+Each transaction is associated with a specific user using user_id.
+
+###🔐 Security Features
+Passwords are securely hashed using PHP password_hash().
+Password verification uses password_verify().
+Prepared SQL statements are used to reduce SQL injection risks.
+Session-based authentication.
+Users can only access their own transactions.
+Edit and delete operations verify transaction ownership.
+
+###⚙️ Installation
+1. Install XAMPP
+
+Install XAMPP and start:
+
+Apache
+MySQL
+2. Clone or copy the project
+
+Place the project inside:
+
+xampp/htdocs/
+
+The final path should be:
+
+xampp/htdocs/expense_tracker/
+3. Create the database
+
+Open:
+
+http://localhost/phpmyadmin
+
+Create a database named:
+
+expense_tracker
+
+Import:
+
+database/expense_tracker.sql
+4. Configure the database
+
+Open:
+
+config/db.php
+
+Make sure the database settings match your XAMPP configuration.
+
+5. Run the application
+
+Open:
+
+http://localhost/expense_tracker/
+📊 Application Flow
+User
+ │
+ ▼
+Registration
+ │
+ ▼
+Login
+ │
+ ▼
+Dashboard
+ │
+ ├── Add Income
+ │
+ ├── Add Expense
+ │
+ ├── Edit Transaction
+ │
+ ├── Delete Transaction
+ │
+ ├── Search
+ │
+ └── Filter
+ │
+ ▼
+Financial Summary
+📈 Future Improvements
+
+Possible future enhancements include:
+
+Expense charts and visual analytics
+Budget planning
+Export transactions to CSV/PDF
+Recurring transactions
+Dark mode
+Email notifications
+Advanced financial reports
+Multi-currency support
+
+----------------------------------------------------------------------------------------
+👩‍💻 Author
+
+Desh Changappa
+
+BCA Student
+
+⭐ Project Purpose
+
+This project was developed as a portfolio project to demonstrate practical skills in:
+
+Full-stack web development
+PHP backend development
+MySQL database management
+CRUD operations
+Authentication
+Responsive UI design
+JavaScript
+Database-driven application development
+
+---
+
