@@ -44,6 +44,36 @@ The application allows users to securely manage their income and expenses, monit
 
 ---
 
+---
+
+## 📸 Screenshots
+
+### 🔐 Login
+
+![Login Page](screenshots/login.png)
+
+### 📝 Registration
+
+![Registration Page](screenshots/register.png)
+
+### 📊 Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+### 💸 Add Expense
+
+![Add Expense](screenshots/add-expense.png)
+
+### 💰 Add Income
+
+![Add Income](screenshots/add-income.png)
+
+### 🔎 Dashboard & Transaction Management
+
+![Dashboard Extended View](screenshots/dashboard-ext.png)
+
+---
+
 ## 🛠️ Technologies Used
 
 | Technology | Purpose |
@@ -184,6 +214,7 @@ Dashboard
  │
  ▼
 Financial Summary
+
 📈 Future Improvements
 
 Possible future enhancements include:
