@@ -1,0 +1,889 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Authentication */
+
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 450px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.brand {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.brand h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.brand p {
+    color: #777;
+    font-size: 14px;
+}
+
+.auth-card h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+/* Forms */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.12);
+}
+
+/* Button */
+
+.btn-primary {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #667eea;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #5568d9;
+    transform: translateY(-1px);
+}
+
+/* Messages */
+
+.message {
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Links */
+
+.auth-link {
+    text-align: center;
+    margin-top: 22px;
+    font-size: 14px;
+    color: #666;
+}
+
+.auth-link a {
+    color: #667eea;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.auth-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+
+@media (max-width: 500px) {
+
+    .auth-card {
+        padding: 30px 22px;
+    }
+
+    .brand h1 {
+        font-size: 24px;
+    }
+
+}
+
+/* ==========================================
+   DASHBOARD
+========================================== */
+
+.dashboard-body {
+    background: #f5f7fb;
+    color: #333;
+    min-height: 100vh;
+}
+
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar {
+    background: #ffffff;
+    min-height: 70px;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.nav-brand {
+    font-size: 21px;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.welcome-text {
+    color: #555;
+    font-size: 14px;
+}
+
+.logout-btn,
+.back-btn {
+    text-decoration: none;
+    padding: 9px 16px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.logout-btn {
+    background: #667eea;
+    color: white;
+}
+
+.logout-btn:hover {
+    background: #5568d9;
+}
+
+.back-btn {
+    background: #f0f2f8;
+    color: #555;
+}
+
+.back-btn:hover {
+    background: #e5e7ef;
+}
+
+
+/* ==========================================
+   DASHBOARD CONTAINER
+========================================== */
+
+.dashboard-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.dashboard-header {
+    margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+    font-size: 32px;
+    margin-bottom: 7px;
+}
+
+.dashboard-header p {
+    color: #777;
+}
+
+
+/* ==========================================
+   SUMMARY CARDS
+========================================== */
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-bottom: 40px;
+}
+
+.summary-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.card-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f3f9;
+    border-radius: 12px;
+    font-size: 25px;
+}
+
+.summary-card p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.summary-card h2 {
+    font-size: 25px;
+}
+
+.income-card {
+    border-left: 5px solid #28a745;
+}
+
+.expense-card {
+    border-left: 5px solid #dc3545;
+}
+
+.balance-card {
+    border-left: 5px solid #667eea;
+}
+
+
+/* ==========================================
+   SECTION TITLE
+========================================== */
+
+.section-title {
+    margin-bottom: 18px;
+}
+
+.section-title h2 {
+    font-size: 22px;
+}
+
+
+/* ==========================================
+   MONTHLY SUMMARY
+========================================== */
+
+.monthly-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    margin-bottom: 30px;
+}
+
+.monthly-card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.monthly-label {
+    color: #777;
+    font-size: 14px;
+}
+
+.monthly-card h3 {
+    margin-top: 7px;
+    font-size: 24px;
+}
+
+.monthly-icon {
+    font-size: 28px;
+}
+
+
+/* ==========================================
+   ACTION BUTTONS
+========================================== */
+
+.action-section {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.action-btn {
+    flex: 1;
+    text-decoration: none;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.action-btn span {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.income-action {
+    background: #e8f7ed;
+    color: #218838;
+}
+
+.income-action:hover {
+    background: #d6f0dd;
+    transform: translateY(-2px);
+}
+
+.expense-action {
+    background: #fdebec;
+    color: #c82333;
+}
+
+.expense-action:hover {
+    background: #f9dadd;
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   TRANSACTIONS
+========================================== */
+
+.transactions-section {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.transactions-header {
+    margin-bottom: 22px;
+}
+
+.transactions-header h2 {
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+.transactions-header p {
+    color: #777;
+    font-size: 14px;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+}
+
+.transaction-table th {
+    text-align: left;
+    padding: 14px;
+    background: #f7f8fc;
+    font-size: 13px;
+    color: #666;
+}
+
+.transaction-table td {
+    padding: 15px 14px;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 14px;
+}
+
+.transaction-table tbody tr:hover {
+    background: #fafbfe;
+}
+
+.category-badge {
+    background: #f0f2f8;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.type-income {
+    color: #218838;
+    font-weight: bold;
+}
+
+.type-expense {
+    color: #c82333;
+    font-weight: bold;
+}
+
+.amount-income {
+    color: #218838;
+    font-weight: bold;
+}
+
+.amount-expense {
+    color: #c82333;
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   EMPTY STATE
+========================================== */
+
+.empty-state {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.empty-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.empty-state h3 {
+    margin-bottom: 8px;
+}
+
+.empty-state p {
+    color: #777;
+}
+
+
+/* ==========================================
+   TRANSACTION FORM
+========================================== */
+
+.form-page-container {
+    width: 90%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 45px 0;
+}
+
+.transaction-form-card {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.large-form-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    font-size: 30px;
+}
+
+.income-form-icon {
+    background: #e8f7ed;
+}
+
+.expense-form-icon {
+    background: #fdebec;
+}
+
+.form-header h1 {
+    font-size: 26px;
+    margin-bottom: 7px;
+}
+
+.form-header p {
+    color: #777;
+}
+
+
+/* ==========================================
+   SELECT / TEXTAREA
+========================================== */
+
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+}
+
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.12);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+/* ==========================================
+   TRANSACTION BUTTON
+========================================== */
+
+.transaction-submit {
+    margin-top: 8px;
+}
+
+.income-submit {
+    background: #28a745;
+}
+
+.income-submit:hover {
+    background: #218838;
+}
+
+.expense-submit {
+    background: #dc3545;
+}
+
+.expense-submit:hover {
+    background: #c82333;
+}
+
+.cancel-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.cancel-link:hover {
+    color: #333;
+}
+
+
+/* ==========================================
+   RESPONSIVE DASHBOARD
+========================================== */
+
+@media (max-width: 800px) {
+
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .monthly-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-brand {
+        font-size: 18px;
+    }
+
+    .welcome-text {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .dashboard-container {
+        width: 94%;
+        padding: 25px 0;
+    }
+
+    .navbar {
+        padding: 0 3%;
+    }
+
+    .action-section {
+        flex-direction: column;
+    }
+
+    .transactions-section {
+        padding: 18px;
+    }
+
+    .transaction-form-card {
+        padding: 25px 20px;
+    }
+
+    .form-page-container {
+        width: 94%;
+        padding: 25px 0;
+    }
+
+}
+
+/* ==========================================
+   SEARCH & FILTER
+========================================== */
+
+.filter-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search-box {
+    flex: 2;
+    min-width: 220px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.12);
+}
+
+.filter-box {
+    flex: 1;
+    min-width: 160px;
+}
+
+.filter-box select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+.filter-box select:focus {
+    border-color: #667eea;
+}
+
+.filter-btn,
+.reset-btn {
+    padding: 12px 17px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.filter-btn {
+    border: none;
+    background: #667eea;
+    color: white;
+}
+
+.filter-btn:hover {
+    background: #5568d9;
+}
+
+.reset-btn {
+    background: #f0f2f8;
+    color: #555;
+}
+
+.reset-btn:hover {
+    background: #e2e4eb;
+}
+
+.result-count {
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+
+/* ==========================================
+   TABLE ACTIONS
+========================================== */
+
+.table-actions {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.edit-btn,
+.delete-btn {
+    border: none;
+    border-radius: 6px;
+    padding: 7px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.edit-btn {
+    background: #eef1ff;
+    color: #5368d8;
+}
+
+.edit-btn:hover {
+    background: #dfe4ff;
+}
+
+.delete-btn {
+    background: #fdebec;
+    color: #c82333;
+}
+
+.delete-btn:hover {
+    background: #f8d8db;
+}
+
+.delete-form {
+    margin: 0;
+}
+
+
+/* ==========================================
+   RESPONSIVE FILTER
+========================================== */
+
+@media (max-width: 800px) {
+
+    .filter-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-box,
+    .filter-box {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .filter-btn,
+    .reset-btn {
+        text-align: center;
+        width: 100%;
+    }
+
+    .table-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+}
+
+/* ==========================================
+   FINAL RESPONSIVE POLISH
+========================================== */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        min-height: 65px;
+    }
+
+    .nav-brand {
+        font-size: 16px;
+    }
+
+    .nav-right {
+        gap: 8px;
+    }
+
+    .logout-btn,
+    .back-btn {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 26px;
+    }
+
+    .summary-card {
+        padding: 20px;
+    }
+
+    .summary-card h2 {
+        font-size: 22px;
+    }
+
+    .monthly-card h3 {
+        font-size: 21px;
+    }
+
+    .transaction-table {
+        min-width: 850px;
+    }
+
+    .transaction-form-card {
+        width: 100%;
+    }
+
+}
