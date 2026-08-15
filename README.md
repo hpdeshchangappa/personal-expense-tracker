@@ -1,4 +1,4 @@
-# 💰 Personal Expense Tracker
+#  Personal Expense Tracker
 
 A full-stack personal finance management web application built using PHP, MySQL, HTML, CSS and JavaScript.
 
@@ -6,16 +6,16 @@ The application allows users to securely manage their income and expenses, monit
 
 ---
 
-## 🚀 Features
+##  Features
 
-### 🔐 Authentication
+###  Authentication
 
 - User registration
 - User login and logout
 - Secure password hashing
 - Session-based authentication
 
-### 💰 Financial Management
+###  Financial Management
 
 - Add income
 - Add expenses
@@ -25,7 +25,7 @@ The application allows users to securely manage their income and expenses, monit
 - Monthly income summary
 - Monthly expense summary
 
-### 🔎 Transaction Management
+###  Transaction Management
 
 - Search transactions
 - Filter by category
@@ -33,7 +33,7 @@ The application allows users to securely manage their income and expenses, monit
 - View recent transactions
 - Transaction result count
 
-### 🎨 User Interface
+###  User Interface
 
 - Modern dashboard
 - Responsive design
@@ -46,35 +46,35 @@ The application allows users to securely manage their income and expenses, monit
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
-### 🔐 Login
+###  Login
 
 ![Login Page](screenshots/login.png)
 
-### 📝 Registration
+###  Registration
 
 ![Registration Page](screenshots/register.png)
 
-### 📊 Dashboard
+###  Dashboard
 
 ![Dashboard](screenshots/dashboard.png)
 
-### 💸 Add Expense
+###  Add Expense
 
 ![Add Expense](screenshots/add-expense.png)
 
-### 💰 Add Income
+###  Add Income
 
 ![Add Income](screenshots/add-income.png)
 
-### 🔎 Dashboard & Transaction Management
+###  Dashboard & Transaction Management
 
 ![Dashboard Extended View](screenshots/dashboard-ext.png)
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 | Technology | Purpose |
 |------------|---------|
@@ -87,7 +87,7 @@ The application allows users to securely manage their income and expenses, monit
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 expense_tracker/
@@ -138,7 +138,7 @@ Transaction dates
 
 Each transaction is associated with a specific user using user_id.
 
-###🔐 Security Features
+### Security Features
 Passwords are securely hashed using PHP password_hash().
 Password verification uses password_verify().
 Prepared SQL statements are used to reduce SQL injection risks.
@@ -146,7 +146,7 @@ Session-based authentication.
 Users can only access their own transactions.
 Edit and delete operations verify transaction ownership.
 
-###⚙️ Installation
+### Installation
 1. Install XAMPP
 
 Install XAMPP and start:
@@ -188,7 +188,7 @@ Make sure the database settings match your XAMPP configuration.
 Open:
 
 http://localhost/expense_tracker/
-📊 Application Flow
+ Application Flow
 User
  │
  ▼
@@ -215,7 +215,7 @@ Dashboard
  ▼
 Financial Summary
 
-📈 Future Improvements
+# Future Improvements
 
 Possible future enhancements include:
 
@@ -229,13 +229,13 @@ Advanced financial reports
 Multi-currency support
 
 ----------------------------------------------------------------------------------------
-👩‍💻 Author
+## Author
 
 Desh Changappa
 
 BCA Student
 
-⭐ Project Purpose
+ Project Purpose
 
 This project was developed as a portfolio project to demonstrate practical skills in:
 
