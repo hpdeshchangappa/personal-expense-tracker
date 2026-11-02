@@ -51,7 +51,17 @@ A full-stack personal finance management web application built with **PHP, MySQL
 ### Dashboard and Transaction Management
 ![Dashboard Extended View](screenshots/dashboard-ext.png)
 
+
 ### Financial Analytics
+=======
+###  Analytics
+
+![Dashboard Extended View](screenshots/anlt1.png)
+![Dashboard Extended View](screenshots/anlt2.png)
+![Dashboard Extended View](screenshots/anlt3.png)
+
+---
+
 
 **Analytics overview — insights and key financial metrics**
 
