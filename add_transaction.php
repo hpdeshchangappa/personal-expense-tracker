@@ -140,6 +140,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             ← Dashboard
         </a>
 
+        <a href="analytics.php" class="nav-link-btn">
+            📊 Analytics
+        </a>
+
         <a href="logout.php" class="logout-btn">
             Logout
         </a>

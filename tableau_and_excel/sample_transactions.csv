@@ -1,0 +1,29 @@
+Transaction ID,Date,Type,Category,Amount (INR),Description
+1,2026-05-01,Income,Salary,55000.00,Monthly Stipend / Salary
+2,2026-05-02,Expense,Bills,4500.00,Electricity and High Speed Wifi
+3,2026-05-03,Expense,Food,1200.00,Weekly Grocery Supermarket
+4,2026-05-05,Expense,Transport,650.00,Metro and Auto pass
+5,2026-05-08,Expense,Food,450.00,Cafeteria lunch with team
+6,2026-05-10,Expense,Entertainment,1500.00,Weekend Movie and Snacks
+7,2026-05-15,Income,Freelance,12000.00,Data Dashboard Consulting Project
+8,2026-05-16,Expense,Shopping,8500.00,Noise Cancelling Headphones
+9,2026-05-20,Expense,Food,800.00,Dinner with friends
+10,2026-05-22,Expense,Health,1200.00,Pharmacy and Multivitamins
+11,2026-05-25,Expense,Education,3200.00,Data Analytics Certification Course
+12,2026-05-28,Expense,Food,1100.00,Weekend Dining out
+13,2026-05-30,Expense,Transport,800.00,Cab rides for university events
+14,2026-06-01,Income,Salary,55000.00,Monthly Stipend / Salary
+15,2026-06-03,Expense,Bills,4200.00,Monthly Utility bills
+16,2026-06-05,Expense,Food,1500.00,Groceries and provisions
+17,2026-06-12,Expense,Shopping,3500.00,Campus Apparel
+18,2026-06-18,Expense,Food,2200.00,Weekend restaurant bill
+19,2026-06-22,Expense,Entertainment,2000.00,Live Music Concert ticket
+20,2026-06-25,Expense,Other Expense,18500.00,Laptop Display Repair (Unusual Anomaly)
+21,2026-07-01,Income,Salary,55000.00,Monthly Stipend / Salary
+22,2026-07-03,Expense,Bills,4800.00,Mobile and Broadband
+23,2026-07-06,Expense,Food,1750.00,Groceries
+24,2026-07-10,Expense,Transport,900.00,Fuel and Metro
+25,2026-07-15,Expense,Shopping,6200.00,Smart Watch
+26,2026-07-18,Expense,Food,1400.00,Dining Out
+27,2026-07-22,Expense,Entertainment,1200.00,Streaming Subscriptions
+28,2026-07-28,Expense,Health,850.00,Dental Checkup

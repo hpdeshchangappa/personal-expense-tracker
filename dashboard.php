@@ -279,6 +279,14 @@ $category_result = $category_query->get_result();
             Welcome, <?php echo htmlspecialchars($user_name); ?>
         </span>
 
+        <a href="analytics.php" class="nav-link-btn">
+            📊 Analytics
+        </a>
+
+        <a href="export_csv.php" class="export-btn" title="Download all transactions as CSV">
+            📥 Export CSV
+        </a>
+
         <a href="logout.php" class="logout-btn">
             Logout
         </a>
