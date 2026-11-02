@@ -1,83 +1,76 @@
-#  Personal Expense Tracker
+# Personal Expense Tracker
 
-A full-stack personal finance management web application built using PHP, MySQL, HTML, CSS and JavaScript.
+A full-stack personal finance management web application built with **PHP, MySQL, HTML, CSS, and JavaScript**. It helps users manage income and expenses, review transactions, monitor their financial position, and explore spending patterns through a dedicated analytics dashboard.
 
-The application allows users to securely manage their income and expenses, monitor their financial balance, and search and filter transactions through an intuitive dashboard.
+## Features
 
----
-
-##  Features
-
-###  Authentication
-
-- User registration
-- User login and logout
-- Secure password hashing
+### Authentication
+- User registration, login, and logout
+- Password hashing
 - Session-based authentication
+- User-specific transaction access
 
-###  Financial Management
-
-- Add income
-- Add expenses
-- Edit transactions
-- Delete transactions
+### Financial Management
+- Add, edit, and delete income and expense transactions
 - Automatic balance calculation
-- Monthly income summary
-- Monthly expense summary
+- Monthly income and expense summaries
 
-###  Transaction Management
-
+### Transaction Management
 - Search transactions
-- Filter by category
-- Filter by transaction type
-- View recent transactions
-- Transaction result count
+- Filter by category and transaction type
+- View recent transactions and transaction counts
 
-###  User Interface
+### Financial Analytics
+- Date filters: All Time, This Month, Last 30 Days, and This Year
+- Data-driven observations, including savings health, cost concentration, budget allocation, and peak spending day
+- Key metrics such as net savings rate, daily burn rate, average expense per transaction, and transaction volume
+- Monthly income-versus-expense cash-flow chart
+- Expense distribution by category
+- Top expense categories ranked by spending (Pareto-style ranking)
+- Spending patterns by day of the week
+- Detailed category summary with transaction count, total spent, percentage share, average transaction, and maximum single transaction
+- Export analytics and category data to CSV
 
-- Modern dashboard
-- Responsive design
-- Mobile-friendly layout
-- Clean transaction table
-- User-friendly forms
-- Visual income and expense indicators
+## Screenshots
 
----
-
----
-
-##  Screenshots
-
-###  Login
-
+### Login
 ![Login Page](screenshots/login.png)
 
-###  Registration
-
+### Registration
 ![Registration Page](screenshots/register.png)
 
-###  Dashboard
-
+### Dashboard
 ![Dashboard](screenshots/dashboard.png)
 
-###  Add Expense
-
+### Add Expense
 ![Add Expense](screenshots/add-expense.png)
 
-###  Add Income
-
+### Add Income
 ![Add Income](screenshots/add-income.png)
 
-###  Dashboard & Transaction Management
-
+### Dashboard and Transaction Management
 ![Dashboard Extended View](screenshots/dashboard-ext.png)
 
----
+### Financial Analytics
 
-##  Technologies Used
+**Analytics overview — insights and key financial metrics**
+
+![Financial Analytics Overview](screenshots/analytics-overview.png)
+
+**Cash flow and category distribution**
+
+![Financial Analytics Charts](screenshots/analytics-charts.png)
+
+**Expense rankings, weekday spending, and category aggregation**
+
+![Financial Analytics Breakdown](screenshots/analytics-breakdown.png)
+
+> The analytics screenshots above are included in this repository update under `screenshots/`. Add the other screenshot files listed earlier if you want those sections to display images as well.
+
+## Technologies Used
 
 | Technology | Purpose |
-|------------|---------|
+|---|---|
 | PHP | Backend development |
 | MySQL | Database management |
 | HTML5 | Page structure |
@@ -85,9 +78,7 @@ The application allows users to securely manage their income and expenses, monit
 | JavaScript | Client-side interactions |
 | XAMPP | Local development environment |
 
----
-
-##  Project Structure
+## Project Structure
 
 ```text
 expense_tracker/
@@ -100,153 +91,129 @@ expense_tracker/
 ├── delete_transaction.php
 ├── logout.php
 │
+├── analytics.php
 ├── config/
 │   └── db.php
-│
 ├── css/
 │   └── style.css
-│
 ├── js/
 │   └── script.js
-│
 ├── database/
 │   └── expense_tracker.sql
-│
+├── screenshots/
+│   ├── login.png
+│   ├── register.png
+│   ├── dashboard.png
+│   ├── add-expense.png
+│   ├── add-income.png
+│   ├── dashboard-ext.png
+│   ├── analytics-overview.png
+│   ├── analytics-charts.png
+│   └── analytics-breakdown.png
 ├── .gitignore
 └── README.md
+```
 
----
-###🗄️ Database
----
+*The structure above reflects the files and folders described for the project. Keep the entries only if they match the actual repository contents.*
+
+## Database
 
 The application uses MySQL with two main tables:
 
-Users
-
+### Users
 Stores registered user information.
 
-Transactions
+### Transactions
+Stores transaction details, including:
+- User ID
+- Transaction type (income or expense)
+- Category
+- Amount
+- Description
+- Transaction date
 
-Stores:
+Each transaction is associated with a user through `user_id`.
 
-Income
-Expenses
-Categories
-Amounts
-Descriptions
-Transaction dates
+## Security
 
-Each transaction is associated with a specific user using user_id.
+- Passwords are hashed using PHP `password_hash()`.
+- Passwords are checked using `password_verify()`.
+- Prepared SQL statements are used to help prevent SQL injection.
+- Session-based authentication protects signed-in pages.
+- Transaction edit and delete operations check ownership so users can access only their own records.
 
-### Security Features
-Passwords are securely hashed using PHP password_hash().
-Password verification uses password_verify().
-Prepared SQL statements are used to reduce SQL injection risks.
-Session-based authentication.
-Users can only access their own transactions.
-Edit and delete operations verify transaction ownership.
+## Installation
 
-### Installation
-1. Install XAMPP
+### 1. Install XAMPP
+Install XAMPP and start **Apache** and **MySQL**.
 
-Install XAMPP and start:
+### 2. Place the project in `htdocs`
+Clone or copy the project into:
 
-Apache
-MySQL
-2. Clone or copy the project
+```text
+C:\xampp\htdocs\expense_tracker\
+```
 
-Place the project inside:
+### 3. Create and import the database
+1. Open `http://localhost/phpmyadmin`.
+2. Create a database named `expense_tracker`.
+3. Import `database/expense_tracker.sql`.
 
-xampp/htdocs/
+### 4. Configure the database connection
+Open `config/db.php` and verify that the host, database name, username, and password match your local MySQL configuration.
 
-The final path should be:
-
-xampp/htdocs/expense_tracker/
-3. Create the database
-
+### 5. Run the application
 Open:
 
-http://localhost/phpmyadmin
-
-Create a database named:
-
-expense_tracker
-
-Import:
-
-database/expense_tracker.sql
-4. Configure the database
-
-Open:
-
-config/db.php
-
-Make sure the database settings match your XAMPP configuration.
-
-5. Run the application
-
-Open:
-
+```text
 http://localhost/expense_tracker/
- Application Flow
+```
+
+## Application Flow
+
+```text
 User
  │
  ▼
-Registration
- │
- ▼
-Login
+Registration / Login
  │
  ▼
 Dashboard
- │
  ├── Add Income
- │
  ├── Add Expense
- │
  ├── Edit Transaction
- │
  ├── Delete Transaction
- │
- ├── Search
- │
- └── Filter
- │
- ▼
-Financial Summary
+ ├── Search and Filter
+ └── Financial Analytics
+      ├── Key Financial Metrics
+      ├── Cash Flow Analysis
+      ├── Category Distribution
+      ├── Spending Pattern Analysis
+      └── CSV Export
+```
 
-# Future Improvements
+## Future Improvements
 
-Possible future enhancements include:
+Potential enhancements include:
+- Budget planning and budget alerts
+- Recurring transactions
+- PDF export
+- Dark mode
+- Email notifications
+- Multi-currency support
 
-Expense charts and visual analytics
-Budget planning
-Export transactions to CSV/PDF
-Recurring transactions
-Dark mode
-Email notifications
-Advanced financial reports
-Multi-currency support
-
-----------------------------------------------------------------------------------------
 ## Author
 
-Desh Changappa
-
+**Desh Changappa**  
 BCA Student
 
- Project Purpose
+## Project Purpose
 
 This project was developed as a portfolio project to demonstrate practical skills in:
-
-Full-stack web development
-PHP backend development
-MySQL database management
-CRUD operations
-Authentication
-Responsive UI design
-JavaScript
-Database-driven application development
-
----
-
+- Full-stack web development
+- PHP backend development
+- MySQL database management
+- CRUD operations and authentication
+- Responsive UI development
+- JavaScript interactions
+- Financial data analysis and visualisation
