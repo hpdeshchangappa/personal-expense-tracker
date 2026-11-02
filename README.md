@@ -72,6 +72,12 @@ The application allows users to securely manage their income and expenses, monit
 
 ![Dashboard Extended View](screenshots/dashboard-ext.png)
 
+###  Analytics
+
+![Dashboard Extended View](screenshots/anlt1.png)
+![Dashboard Extended View](screenshots/anlt2.png)
+![Dashboard Extended View](screenshots/anlt3.png)
+
 ---
 
 ##  Technologies Used
