@@ -1,22 +1,5 @@
 <?php
-
-session_start();
-
-require_once "config/db.php";
-
-
-// Check login
-
-if (!isset($_SESSION["user_id"])) {
-
-    header("Location: index.php");
-    exit();
-
-}
-
-
-$user_id = $_SESSION["user_id"];
-
+require_once __DIR__ . "/auth.php";
 
 // Only allow POST requests
 

@@ -1,0 +1,5 @@
+# Load the login page automatically when the project folder is opened.
+DirectoryIndex index.php
+
+# Optional: prevent directory listing if no index file is present.
+Options -Indexes

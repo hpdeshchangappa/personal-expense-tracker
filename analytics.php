@@ -1,50 +1,5 @@
 <?php
-
-session_start();
-
-require_once "config/db.php";
-
-// 1. Check login authentication
-if (!isset($_SESSION["user_id"])) {
-    header("Location: index.php");
-    exit();
-}
-
-$user_id = (int)$_SESSION["user_id"];
-
-// 2. Validate that user_id exists in `users` table to satisfy foreign key constraints
-$check_user = $conn->prepare("SELECT id, name FROM users WHERE id = ?");
-$check_user->bind_param("i", $user_id);
-$check_user->execute();
-$user_res = $check_user->get_result();
-
-if ($user_row = $user_res->fetch_assoc()) {
-    $user_id = (int)$user_row["id"];
-    $user_name = $user_row["name"];
-    $_SESSION["user_id"] = $user_id;
-    $_SESSION["user_name"] = $user_name;
-} else {
-    // If user_id in session is stale or was deleted, fall back to an existing user in `users`
-    $any_user = $conn->query("SELECT id, name FROM users ORDER BY id ASC LIMIT 1");
-    if ($any_user && ($any_row = $any_user->fetch_assoc())) {
-        $user_id = (int)$any_row["id"];
-        $user_name = $any_row["name"];
-        $_SESSION["user_id"] = $user_id;
-        $_SESSION["user_name"] = $user_name;
-    } else {
-        // If users table is completely empty, create an initial user record
-        $default_hash = password_hash("password123", PASSWORD_DEFAULT);
-        $create_u = $conn->prepare("INSERT INTO users (name, email, password) VALUES ('Student Analyst', 'analyst@pes.edu', ?)");
-        $create_u->bind_param("s", $default_hash);
-        $create_u->execute();
-        $user_id = (int)$conn->insert_id;
-        $user_name = "Student Analyst";
-        $_SESSION["user_id"] = $user_id;
-        $_SESSION["user_name"] = $user_name;
-        $create_u->close();
-    }
-}
-$check_user->close();
+require_once __DIR__ . "/auth.php";
 
 // ==================================================
 // ONE-CLICK DEMO DATA SEEDER (FOR INSTANT PREVIEW)
